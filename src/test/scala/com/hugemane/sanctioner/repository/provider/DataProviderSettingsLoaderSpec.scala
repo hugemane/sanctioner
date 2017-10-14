@@ -8,7 +8,7 @@ class DataProviderSettingsLoaderSpec extends TestBaseSpec {
   it should "load database provider settings from config" in {
     val config = ConfigFactory.load()
     val databaseSettings = DataProviderSettingsLoader(config).load()
-    databaseSettings.url shouldEqual "mongodb://localhost"
+    databaseSettings.url shouldEqual "mongodb://127.0.0.1"
     databaseSettings.database shouldEqual "sanctioner"
   }
 

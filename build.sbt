@@ -8,5 +8,9 @@ dependencyOverrides ++= Dependencies.dependencyOverrides
 
 libraryDependencies ++= Dependencies.allDependencies
 
-testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-l", "com.hugemane.sanctioner.test.tag.DatabaseTest")
+//test related
+parallelExecution in Test := false
+
+testOptions in Test += Tests.Argument("-l", "DatabaseTest")
+testOptions in Test += Tests.Argument("-l", "IntegrationTest")
 

@@ -1,0 +1,3 @@
+package com.hugemane.sanctioner.http.serialization
+
+trait JsonCirceCompleteSerialization extends CirceSerialization with DateTimeSerialization
